@@ -1,0 +1,24 @@
+# AutoAudit — Python Dependencies
+# Core engine has ZERO external dependencies (stdlib only)
+# Optional packages for production features:
+
+# VBA extraction from binary Office files (.xlsm, .docm, .pptm)
+# oletools>=0.60
+
+# Repository scanning via API
+# PyGithub>=2.1.1
+# python-gitlab>=4.4.0
+
+# FastAPI backend (for multi-tenant deployment)
+# fastapi>=0.110.0
+# uvicorn[standard]>=0.27.0
+# sqlalchemy>=2.0.0
+# psycopg2-binary>=2.9.9
+
+# Windows agent packaging
+# pyinstaller>=6.4.0
+# pywin32>=306  # Windows only
+
+# PDF report generation
+# reportlab>=4.1.0
+# WeasyPrint>=62.0

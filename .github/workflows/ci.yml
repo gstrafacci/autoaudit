@@ -1,0 +1,60 @@
+name: AutoAudit CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-scanner:
+    name: Scanner Engine Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run scanner on sample files
+        run: |
+          python engine/scanner.py samples/
+          echo "Exit code: $?"
+
+      - name: Validate output JSON
+        run: |
+          python -c "
+          import json, glob, sys
+          files = glob.glob('scan_result_*.json')
+          if not files:
+              print('ERROR: No scan output found')
+              sys.exit(1)
+          with open(files[0]) as f:
+              data = json.load(f)
+          assert data['total_findings'] > 0, 'Expected findings in sample files'
+          assert data['critical'] > 0, 'Expected CRITICAL findings in sample files'
+          print(f'OK: {data[\"total_findings\"]} findings, risk score {data[\"risk_score\"]}')
+          "
+
+  self-audit:
+    name: Self-Audit (scan AutoAudit itself)
+    runs-on: ubuntu-latest
+    needs: test-scanner
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Scan engine source
+        run: |
+          python engine/scanner.py engine/
+          echo "Self-audit complete"
