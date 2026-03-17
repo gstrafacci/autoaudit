@@ -1,6 +1,6 @@
 # 🔍 AutoAudit — Security Scanner for Python & VBA Scripts
 
-**AutoAudit** is an open-source security auditing tool developed by [Setec Consulting Group](https://setec.com.br) that scans Python scripts, VBA macros, and Office files to detect code vulnerabilities — enabling companies to identify and remediate security risks in their automation assets.
+**AutoAudit** is an open-source security auditing tool developed by me that scans Python scripts, VBA macros, and Office files to detect code vulnerabilities — enabling companies to identify and remediate security risks in their automation assets.
 
 ---
 
