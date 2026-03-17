@@ -280,13 +280,17 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🏢 About Setec Consulting Group
+## 🏢 About
 
-[Setec](https://setec.com.br) is a Brazilian consulting firm founded in 1994, specializing in Operational Excellence, Lean Six Sigma, Intelligent Automation, and AI adoption. AutoAudit is part of Setec's **SecureAutomation** practice — helping organizations govern and secure their automation estates.
+My work focuses on building scalable automation environments, structuring Centers of Excellence, and implementing governance models that allow companies to expand RPA, AI, and Agentic AI safely and sustainably.
 
-**Commercial services built on AutoAudit:**
-- Security Audit (diagnostic) — R$ 15k–80k per engagement
-- Remediation Project — time & material or fixed-price phases
-- Continuous Monitoring — managed service / recurring revenue
+AutoAudit was created as part of a SecureAutomation approach designed to help organizations assess, secure, and govern their automation landscape, ensuring risk control, compliance, and long-term scalability of digital initiatives. The solution is used to evaluate automation platforms, identify vulnerabilities, define remediation plans, and establish continuous monitoring practices aligned with enterprise architecture and security standards.
 
-For commercial inquiries: [contato@setec.com.br](mailto:contato@setec.com.br)
+Commercial services built on AutoAudit
+
+Security Audit, structured diagnostic engagement typically ranging from R$15k to R$80k depending on scope and environment size.
+Remediation Project, implementation of corrections and improvements delivered in fixed-price phases or time and material model.
+Continuous Monitoring, recurring managed service focused on governance, security, and operational stability of automation environments.
+
+For commercial inquiries
+strafacci.gilberto@gmail.com
